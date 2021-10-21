@@ -109,10 +109,10 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 
 // CODE HERE
 const totals = orders.map(order => {
-  let roundedPrice = (order.price * order.tax).toFixed(2)
+  let roundedPrice = (order.price + (order.price * order.tax)).toFixed(2)
   return parseFloat(roundedPrice)
 })
-console.log(totals)
+console.log("totals:", totals)
 
 
 ////////// PROBLEM 6 //////////
